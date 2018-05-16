@@ -1,13 +1,14 @@
 // Dependencies
-const path = require ('path');
-const winston = require ('winston');
-const winstoncw = require ('winston-cloudwatch');
+import path from 'path';
+import winston from 'winston';
+import winstoncw from 'winston-cloudwatch';
 
 // Local
-const config = require ('./config');
+import config from './config';
 
 // Path
-config.log.local.filename = path.join (__dirname, '..', '..', config.log.local.filename);
+config.log.local.filename = path.join (
+	__dirname, '..', '..', config.log.local.filename);
 
 // Configure
 // Console

@@ -1,22 +1,22 @@
 // Runtime
-require ('babel-polyfill');
-require ('./util/log');
+import 'babel-polyfill';
+import './util/log';
 
 // Dependencies
-const winston = require ('winston');
+import winston from 'winston';
 
 // Local
-const config = require ('./util/config');
+import config from './util/config';
 
 (async () =>
 {
 	try
 	{
-		winston.log ('info', 'Hello world!');
-		winston.log ('info', 'Config', config);
+		winston.info ('Hello world!');
+		winston.info ('Config', config);
 	}
 	catch (e)
 	{
-		winston.log ('error', e);
+		winston.error (e);
 	}
 })();

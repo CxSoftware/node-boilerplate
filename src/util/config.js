@@ -1,9 +1,9 @@
 // Dependencies
-const jsonfile = require ('jsonfile');
-const path = require ('path');
+import jsonfile from 'jsonfile';
+import path from 'path';
 
 // Constants
 const CONFIG_PATH = path.join (__dirname, '..', '..', 'config.json');
 
 // Module
-module.exports = jsonfile.readFileSync (CONFIG_PATH);
+export default jsonfile.readFileSync (CONFIG_PATH);
