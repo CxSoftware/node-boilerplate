@@ -1,9 +1,6 @@
-// Runtime
-import 'babel-polyfill';
-
 // Dependencies
-import Code from 'code';
-import Lab from 'lab';
+import * as Code from 'code';
+import * as Lab from 'lab';
 
 // Constants
 const expect = Code.expect;

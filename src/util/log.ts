@@ -1,6 +1,6 @@
 // Dependencies
-import path from 'path';
-import winston from 'winston';
+import * as path from 'path';
+import * as winston from 'winston';
 
 // Local
 import config from './config';

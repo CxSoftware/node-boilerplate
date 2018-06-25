@@ -1,9 +1,8 @@
 // Runtime
-import 'babel-polyfill';
 import './util/log';
 
 // Dependencies
-import winston from 'winston';
+import * as winston from 'winston';
 
 // Local
 import config from './util/config';
