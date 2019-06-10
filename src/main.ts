@@ -1,21 +1,16 @@
-// Runtime
-import './util/log';
-
 // Dependencies
-import * as winston from 'winston';
-
-// Local
 import config from './util/config';
+import logger from './util/log';
 
 (async () =>
 {
 	try
 	{
-		winston.info ('Hello world!');
-		winston.info ('Config', config);
+		logger.info ('Hello world!');
+		logger.info ('Config', config);
 	}
 	catch (e)
 	{
-		winston.error (e);
+		logger.error (e);
 	}
 })();

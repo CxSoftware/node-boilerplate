@@ -1,6 +1,6 @@
 // Dependencies
-import * as Code from 'code';
-import * as Lab from 'lab';
+import * as Code from '@hapi/code';
+import * as Lab from '@hapi/lab';
 
 // Constants
 const expect = Code.expect;

@@ -16,7 +16,7 @@ const LAB_CONFIG =
 
 // Tasks
 gulp.task ('clean', () => gulp
-	.src ('dist', { read: false })
+	.src ('dist', { read: false, allowEmpty: true })
 	.pipe (clean ()));
 
 gulp.task ('lint', () => gulp
@@ -24,13 +24,17 @@ gulp.task ('lint', () => gulp
 	.pipe (tslint ({ formatter: 'stylish' }))
 	.pipe (tslint.report()));
 
-gulp.task ('build', ['clean', 'lint'], () => gulp
+gulp.task ('compile', () => gulp
 	.src ('src/**/*.ts')
 	.pipe (tsProject())
 	.pipe (gulp.dest ('dist')));
 
-gulp.task ('test', ['build'], () => gulp
+gulp.task ('build', gulp.series (gulp.parallel ('clean', 'lint'), 'compile'));
+
+gulp.task ('runtests', () => gulp
 	.src ('dist/test')
 	.pipe (lab (LAB_CONFIG)));
 
-gulp.task ('default', ['test']);
+gulp.task ('test', gulp.series ('build', 'runtests'));
+
+gulp.task ('default', gulp.parallel ('test'));
