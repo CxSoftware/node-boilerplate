@@ -8,6 +8,7 @@ This project is a starting point for a project using:
 - [Node](https://nodejs.org/) 12.x: the runtime
 - [Gulp](https://gulpjs.com/): the task runner
 - [TypeScript](https://www.typescriptlang.org/): the compiler
+- [ESLint](https://eslint.org/): the linter
 - [lab](https://github.com/hapijs/lab): the test framework
 - [winston](https://github.com/winstonjs/winston): the logger
 

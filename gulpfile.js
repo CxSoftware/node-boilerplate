@@ -1,9 +1,9 @@
 // Dependencies
 const gulp = require ('gulp');
-const clean = require('gulp-clean');
+const clean = require ('gulp-clean');
+const eslint = require ('gulp-eslint');
 const lab = require ('gulp-lab');
 const ts = require ('gulp-typescript');
-const tslint = require ('gulp-tslint');
 
 const tsProject = ts.createProject ('tsconfig.json');
 
@@ -21,8 +21,9 @@ gulp.task ('clean', () => gulp
 
 gulp.task ('lint', () => gulp
 	.src ('src/**/*.ts')
-	.pipe (tslint ({ formatter: 'stylish' }))
-	.pipe (tslint.report()));
+	.pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError()));
 
 gulp.task ('compile', () => gulp
 	.src ('src/**/*.ts')
