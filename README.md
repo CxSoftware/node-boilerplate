@@ -12,6 +12,11 @@ This project is a starting point for a project using:
 - [lab](https://github.com/hapijs/lab): the test framework
 - [winston](https://github.com/winstonjs/winston): the logger
 
+## Requirements
+
+- Node 12.x
+- Gulp: ```npm install -g gulp```
+
 ## Setup
 
 - Clone the project
