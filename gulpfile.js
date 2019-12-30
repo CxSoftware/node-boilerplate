@@ -22,8 +22,8 @@ gulp.task ('clean', () => gulp
 gulp.task ('lint', () => gulp
 	.src ('src/**/*.ts')
 	.pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError()));
+	.pipe(eslint.format())
+	.pipe(eslint.failAfterError()));
 
 gulp.task ('compile', () => gulp
 	.src ('src/**/*.ts')
